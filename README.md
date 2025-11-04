@@ -1,67 +1,96 @@
-# 🚀 KIMI MCP AGENT
-
-**MCP-based AI Agent (Memory + Context + Planning) with Grok API**
-
-Built on iPad by **Ankit Rajput** 💪
-
-## 🎯 What is MCP?
+# 🤖 KIMI MCP AGENT
 
 **MCP = Memory + Context + Planning**
 
-- **Memory**: Tracks conversation history (last 5 messages)
-- **Context**: Understands who you are and what you need
-- **Planning**: Smart 3-step approach to handle requests
+An intelligent AI assistant that remembers conversations, understands context, and plans responses smartly. Powered by Grok API with Hindi + English mix support.
 
-## 📦 Installation
+## 🌟 Features
+
+- **Memory**: Remembers last 5 messages for context
+- **Context**: Understands conversation flow
+- **Planning**: Smart response strategy
+- **Bilingual**: Hindi + English mix responses
+- **REST API**: Easy integration
+
+## 🚀 Quick Start
+
+### Installation
 
 ```bash
-npm install express openai dotenv
+npm install
 ```
 
-## 🔐 Setup
+### Setup
 
-1. Create `.env` file:
+1. Copy `.env.example` to `.env`
+2. Add your Grok API key:
 ```
 GROK_API_KEY=xai-your-key-here
 ```
 
-2. Get your Grok API key from [x.ai](https://x.ai)
-
-## 🚀 Run
+### Run
 
 ```bash
-node server.js
+npm start
 ```
 
-Server starts at: `http://localhost:3000`
+Server will start at `http://localhost:3000`
 
-## 🧪 Test
+## 📝 API Usage
 
+### Test Endpoint
+```bash
+curl http://localhost:3000
+```
+
+### Chat with Agent
 ```bash
 curl -X POST http://localhost:3000/kimi \
   -H "Content-Type: application/json" \
   -d '{"message":"Bhai, kya haal hai?"}'
 ```
 
-## 🎨 Features
+### Response
+```json
+{
+  "reply": "Sab badhiya bhai! Aap batao, kaise help kar sakta hoon?",
+  "mcp": {
+    "memory": [
+      {"role": "user", "content": "Bhai, kya haal hai?"},
+      {"role": "assistant", "content": "Sab badhiya bhai!..."}
+    ]
+  }
+}
+```
 
-✅ Hindi + English mix responses  
-✅ Memory of last 5 messages  
-✅ Context-aware replies  
-✅ Planning-based approach  
-✅ Grok AI powered  
+## 🏗️ Architecture
 
-## 📱 Built on iPad
+```
+MCP Agent
+├── Memory: Last 5 messages
+├── Context: System prompt + conversation history
+└── Planning: 3-step smart reply strategy
+```
 
-Yes, you read that right! This entire project was coded on an iPad using Replit mobile. 3+ days, 100+ errors, but never gave up! 🔥
+## 🛠️ Tech Stack
+
+- **Runtime**: Node.js
+- **Framework**: Express.js
+- **AI**: Grok API (via OpenAI SDK)
+- **Language**: JavaScript
+
+## 📊 Project Status
+
+- ✅ Locally working
+- ✅ MCP architecture implemented
+- ⏳ Awaiting $5 Grok credits for full deployment
 
 ## 👨‍💻 Author
 
-**Ankit Rajput**  
-iPad Developer | AI Enthusiast
+**Ankit Rajput**
+
+Built with ❤️ on iPad after 3+ days of learning and 100+ errors!
 
 ---
 
-**Status**: Working Locally  
-**Issue**: $5 Grok credits needed  
-**Effort**: 💯 Dedication!
+*"Maine haar nahi maani – main lada!"*
