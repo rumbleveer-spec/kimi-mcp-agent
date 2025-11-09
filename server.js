@@ -5,9 +5,9 @@ const { OpenAI } = require('openai');
 const app = express();
 app.use(express.json());
 
-const grok = new OpenAI({
-  apiKey: process.env.GROK_API_KEY,
-  baseURL: "https://api.x.ai/v1"
+const perplexity = new OpenAI({
+  apiKey: process.env.PERPLEXITY_API_KEY,
+  baseURL: "https://api.perplexity.ai"
 });
 
 let mcp = {
@@ -23,8 +23,8 @@ app.post('/kimi', async (req, res) => {
   const systemPrompt = `${mcp.context}\nPlan: ${mcp.plan}\nHistory: ${JSON.stringify(mcp.memory.slice(-5))}`;
 
   try {
-    const response = await grok.chat.completions.create({
-      model: "grok-beta",
+    const response = await perplexity.chat.completions.create({
+      model: "llama-3.1-sonar-small-128k-online",
       messages: [
         { role: "system", content: systemPrompt },
         ...mcp.memory.slice(-5)
@@ -46,6 +46,7 @@ app.get('/', (req, res) => {
 KIMI MCP AGENT LIVE!
 
 MCP = Memory + Context + Planning
+Powered by Perplexity AI
 
 curl -X POST /kimi -d '{"message":"Bhai, kya haal hai?"}'
     </pre>
