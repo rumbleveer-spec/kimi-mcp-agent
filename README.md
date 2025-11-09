@@ -12,6 +12,10 @@ Built on iPad by **Ankit Rajput** 💪
 - **Context**: Understands who you are and what you need
 - **Planning**: Smart 3-step approach to handle requests
 
+## ⚡ Powered by Perplexity AI
+
+Uses **Perplexity's Sonar model** with real-time web search capabilities for accurate, up-to-date responses!
+
 ## 📦 Installation
 
 ```bash
@@ -49,14 +53,7 @@ curl -X POST http://localhost:3000/kimi \
 ✅ Memory of last 5 messages  
 ✅ Context-aware replies  
 ✅ Planning-based approach  
-✅ Perplexity AI powered (with real-time search!)  
-
-## 🌟 Why Perplexity?
-
-- **Real-time Information**: Gets latest data from the internet
-- **Accurate Answers**: More reliable than traditional models
-- **Free Tier**: No payment required for testing
-- **Fast Responses**: Quick and efficient
+✅ **Perplexity AI powered with real-time search**  
 
 ## 📱 Built on iPad
 
@@ -69,5 +66,6 @@ iPad Developer | AI Enthusiast
 
 ---
 
-**Status**: Working with Perplexity AI  
+**Status**: Working Locally  
+**Tech**: Perplexity AI (FREE API!)  
 **Effort**: 💯 Dedication!
