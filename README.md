@@ -1,96 +1,73 @@
-# 🤖 KIMI MCP AGENT
+# 🚀 KIMI MCP AGENT
+
+**MCP-based AI Agent (Memory + Context + Planning) with Perplexity AI**
+
+Built on iPad by **Ankit Rajput** 💪
+
+## 🎯 What is MCP?
 
 **MCP = Memory + Context + Planning**
 
-An intelligent AI assistant that remembers conversations, understands context, and plans responses smartly. Powered by Grok API with Hindi + English mix support.
+- **Memory**: Tracks conversation history (last 5 messages)
+- **Context**: Understands who you are and what you need
+- **Planning**: Smart 3-step approach to handle requests
 
-## 🌟 Features
-
-- **Memory**: Remembers last 5 messages for context
-- **Context**: Understands conversation flow
-- **Planning**: Smart response strategy
-- **Bilingual**: Hindi + English mix responses
-- **REST API**: Easy integration
-
-## 🚀 Quick Start
-
-### Installation
+## 📦 Installation
 
 ```bash
-npm install
+npm install express openai dotenv
 ```
 
-### Setup
+## 🔐 Setup
 
-1. Copy `.env.example` to `.env`
-2. Add your Grok API key:
+1. Create `.env` file:
 ```
-GROK_API_KEY=xai-your-key-here
+PERPLEXITY_API_KEY=pplx-your-key-here
 ```
 
-### Run
+2. Get your Perplexity API key from [perplexity.ai](https://www.perplexity.ai/settings/api)
+
+## 🚀 Run
 
 ```bash
-npm start
+node server.js
 ```
 
-Server will start at `http://localhost:3000`
+Server starts at: `http://localhost:3000`
 
-## 📝 API Usage
+## 🧪 Test
 
-### Test Endpoint
-```bash
-curl http://localhost:3000
-```
-
-### Chat with Agent
 ```bash
 curl -X POST http://localhost:3000/kimi \
   -H "Content-Type: application/json" \
   -d '{"message":"Bhai, kya haal hai?"}'
 ```
 
-### Response
-```json
-{
-  "reply": "Sab badhiya bhai! Aap batao, kaise help kar sakta hoon?",
-  "mcp": {
-    "memory": [
-      {"role": "user", "content": "Bhai, kya haal hai?"},
-      {"role": "assistant", "content": "Sab badhiya bhai!..."}
-    ]
-  }
-}
-```
+## 🎨 Features
 
-## 🏗️ Architecture
+✅ Hindi + English mix responses  
+✅ Memory of last 5 messages  
+✅ Context-aware replies  
+✅ Planning-based approach  
+✅ Perplexity AI powered (with real-time search!)  
 
-```
-MCP Agent
-├── Memory: Last 5 messages
-├── Context: System prompt + conversation history
-└── Planning: 3-step smart reply strategy
-```
+## 🌟 Why Perplexity?
 
-## 🛠️ Tech Stack
+- **Real-time Information**: Gets latest data from the internet
+- **Accurate Answers**: More reliable than traditional models
+- **Free Tier**: No payment required for testing
+- **Fast Responses**: Quick and efficient
 
-- **Runtime**: Node.js
-- **Framework**: Express.js
-- **AI**: Grok API (via OpenAI SDK)
-- **Language**: JavaScript
+## 📱 Built on iPad
 
-## 📊 Project Status
-
-- ✅ Locally working
-- ✅ MCP architecture implemented
-- ⏳ Awaiting $5 Grok credits for full deployment
+Yes, you read that right! This entire project was coded on an iPad using Replit mobile. 3+ days, 100+ errors, but never gave up! 🔥
 
 ## 👨‍💻 Author
 
-**Ankit Rajput**
-
-Built with ❤️ on iPad after 3+ days of learning and 100+ errors!
+**Ankit Rajput**  
+iPad Developer | AI Enthusiast
 
 ---
 
-*"Maine haar nahi maani – main lada!"*
+**Status**: Working with Perplexity AI  
+**Effort**: 💯 Dedication!
